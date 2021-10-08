@@ -54,8 +54,8 @@ const Header = () => {
 					onClick={ signout }
 					className="rounded-full cursor-pointer"
 					src={session.user.image}
-					width={40}
-					height={40}
+					width={42}
+					height={42}
 				/>
 
 				<p className="whitespace-nowrap font-semibold pr-3">{session.user.name}</p>

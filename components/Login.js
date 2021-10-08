@@ -5,7 +5,7 @@ import { signIn } from 'next-auth/client'
 
 function Login() {
 	return (
-		<div className="grid place-items-center ">
+		<div className="grid place-items-center mt-6">
 			<Image 
 				src="https://links.papareact.com/t4i"
 				height={400}

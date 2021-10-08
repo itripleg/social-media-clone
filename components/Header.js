@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import HeaderIcon from '../components/HeaderIcon'
+import { signout, useSession } from 'next-auth/client'
 import {
 	BellIcon,
 	ChatIcon,
@@ -16,8 +17,10 @@ import {
 	ShoppingCartIcon,
 } from "@heroicons/react/outline"
 
-
 const Header = () => {
+
+	const [session] = useSession();
+
 	return (
 		<div className="sticky top-0 z-50 bg-white flex items-center p-2 md: px-5 shadow-md">				
 			{/*Left*/}
@@ -47,7 +50,15 @@ const Header = () => {
 			{/*Right*/}
 			<div className="flex items-center sm:space-x-2 justify-end">
 				{/*Profile Pic*/}
-				<p className="whitespace-nowrap font-semibold pr-3">Josh bell</p>
+				<Image 
+					onClick={ signout }
+					className="rounded-full cursor-pointer"
+					src={session.user.image}
+					width={40}
+					height={40}
+				/>
+
+				<p className="whitespace-nowrap font-semibold pr-3">{session.user.name}</p>
 				<ViewGridIcon className="icon" />
 				<ChatIcon className="icon" />
 				<BellIcon className="icon" />

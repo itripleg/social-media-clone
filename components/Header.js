@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import HeaderIcon from '../components/headerIcon'
+import HeaderIcon from '../components/HeaderIcon'
 import {
 	BellIcon,
 	ChatIcon,

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { getSession } from 'next-auth/client'
 import Header from '../components/Header'
 import Login from '../components/Login'
+import Sidebar from '../components/Sidebar'
 
 export default function Home({ session }) {
   if (!session) return <Login />
@@ -16,6 +17,7 @@ export default function Home({ session }) {
       <Header />
       <main>
         {/*Sidebar*/}
+        <Sidebar />
 
         {/*Feed*/}
 

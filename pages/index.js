@@ -4,22 +4,19 @@ import { getSession } from 'next-auth/client'
 import Header from '../components/Header'
 import Login from '../components/Login'
 import Sidebar from '../components/Sidebar'
+import Feed from '../components/Feed'
 
 export default function Home({ session }) {
   if (!session) return <Login />
   return (
-    <div>
+    <div className="h-screen bg-gray-200">
       <Head>
         <title>Fakebook</title>
       </Head>
-
-      {/*Header*/}
       <Header />
-      <main>
-        {/*Sidebar*/}
+      <main className="flex">
         <Sidebar />
-
-        {/*Feed*/}
+        <Feed />
 
         {/*Widgets*/}
       </main>

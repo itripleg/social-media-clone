@@ -27,7 +27,9 @@ const Header = () => {
 			<div className="flex items-center">
 				<Image
 				src={"https://links.papareact.com/5me"}
-				width={40} height={40} layout="fixed" />
+				width={40} height={40} layout="fixed"
+				alt="Fakebook.com"
+				 />
 
 				<div className="flex ml-2 items-center rounded-full bg-gray-100 p-2">
 					<SearchIcon className="h-6"/>
@@ -53,10 +55,11 @@ const Header = () => {
 				<Image 
 					onClick={ signOut }
 					src={ session.user.image }
-					className="rounded-full cursor-pointer"
+					className="rounded-full cursor-pointer text-xs"
 					width={40}
 					height={40}
 					layout="fixed"
+					alt="Signout"
 				/>
 
 				<p className="whitespace-nowrap font-semibold pr-3">{session.user.name}</p>
